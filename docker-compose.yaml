@@ -1,0 +1,32 @@
+version: "3"
+services:
+  client:
+    image: client
+    build: ./client
+    ports:
+      - "3000:3000"
+    networks:
+      - app
+  server:
+    image: server
+    build: ./server
+    ports:
+      - "5000:5000"
+    networks:
+      - app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - app
+    volumes:
+      - data-storage:/data/db
+networks:
+  app:
+    driver: bridge
+volumes:
+  data-storage:
+    driver: local
