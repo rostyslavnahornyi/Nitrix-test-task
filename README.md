@@ -12,7 +12,7 @@ A multi-container Docker-compose app with MERN stack.
 
 
 **Clone and Run**
-1. `git clone https://github.com/rostyslavnahornyi/Nitrix-test-task.git <path>]`
+1. `git clone https://github.com/rostyslavnahornyi/Nitrix-test-task.git <path>`
 2. `cd <path>`
-3. In server/.env file you should replace *<username>* and *<password>* to your data from MongoDb
+3. In the **server/.env** file you should replace *\<username\>* and *\<password\>* to your data from MongoDb
 4. `docker-compose up`
